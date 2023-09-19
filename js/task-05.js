@@ -1,8 +1,11 @@
-const inputName = document.querySelector('#name-input');
+const inputName = document.querySelector('input#name-input');
 const outputName = document.querySelector('#name-output');
 
 inputName.addEventListener("input", (event) => {
-    if (outputName) {
-        outputName.textContent = event.currentTarget.value;
-    }
-}); 
+  outputName.textContent = event.currentTarget.value;
+});
+
+inputName.addEventListener("blur", () => {
+      outputName.textContent = "Anonymous!";
+  
+});
